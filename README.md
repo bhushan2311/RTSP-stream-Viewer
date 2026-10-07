@@ -2,7 +2,8 @@
 
 A web application that lets you add RTSP stream URLs and watch the live streams in your browser, several at once in a responsive grid. Built with a **React + TypeScript** frontend and a **Go** backend that uses **FFmpeg** to convert RTSP into a browser-friendly format and delivers it over **WebSockets**.
 
-<img width="1917" height="958" alt="Screenshot 2026-10-07 114321" src="https://github.com/user-attachments/assets/a1a85c41-5d08-454a-b04e-b851c763eed5" />
+
+<img width="1917" height="1017" alt="image" src="https://github.com/user-attachments/assets/63bea586-05f6-4a57-8646-65c1a7bacb01" />
 
 
 | | |
@@ -36,6 +37,11 @@ A web application that lets you add RTSP stream URLs and watch the live streams 
 
 1. Open https://rtsp-stream-viewer-nine.vercel.app (the first load can take about a minute).
 2. Paste any **publicly reachable RTSP URL** (`rtsp://...`) and click **Add stream**.
+
+For testing, you can paste below dummy URLs in input field:
+
+1. rtsp://stream.strba.sk:1935/strba/VYHLAD_JAZERO.stream
+2. rtsp://196.21.92.82/axis-media/media.amp
 
 **If a stream does not play on the live site, this is usually why:**
 - **The address is not reachable from the internet.** The backend runs in the cloud, so it can only open streams that are publicly accessible. Addresses such as `rtsp://127.0.0.1:...`, `rtsp://localhost:...` or `rtsp://192.168.x.x:...` point to the cloud server itself or to a private network, not to your computer, so they fail. They work when you [run the project locally](#run-locally).
